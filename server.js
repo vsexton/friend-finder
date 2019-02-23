@@ -4,7 +4,7 @@ var path = require('path');
    
 //express 
 var app = express();
-var port = process.env.PORT || 8080
+var PORT = process.env.port || 8080
 
 //expose the public derectory to access css file 
 app.use(express.static(path.join(__dirname, './app/public')));
@@ -19,6 +19,6 @@ require(path.join(__dirname, './app/routing/apiRoutes'))(app);
 require(path.join(__dirname, './app/routing/htmlRoutes'))(app);
 
 // Start listening on PORT
-app.listen(port, function() {
-  console.log('Friend Finder app is listening on PORT: ' + port);
+app.listen(PORT, function() {
+  console.log('Friend Finder app is listening on PORT: ' + PORT);
 });
